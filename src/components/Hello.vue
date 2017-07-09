@@ -3,8 +3,8 @@
         <swiper :options="swiperOption" ref="mySwiper" class="mySwiper">
             <!-- slides -->
             <swiper-slide class="page1 page">
-                <div class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-                    <img :src="require('../assets/imgs/photo1.jpg')" alt="" />
+                <div class="imgWrapper">
+                    <img :src="require('../assets/imgs/photo1.jpg')" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
                 </div>
                 <div class="background"></div>
             </swiper-slide>
@@ -12,14 +12,14 @@
               您的浏览器不支持 audio 标签。
             </audio>
             <swiper-slide class="page2 page">
-                <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-                    <img :src="require('../assets/imgs/photo2.jpg')" alt="" />
+                <div class="imgWrapper">
+                    <img :src="require('../assets/imgs/photo2.jpg')" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
                 </div>
                 <div class="background"></div>
             </swiper-slide>
             <swiper-slide class="page3 page">
-                <div class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-                    <img :src="require('../assets/imgs/photo3.jpg')" alt="" />
+                <div class="imgWrapper">
+                    <img :src="require('../assets/imgs/photo3.jpg')" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
                 </div>
                 <div class="background"></div>
             </swiper-slide>
@@ -145,7 +145,14 @@ export default {
   position: absolute;
   z-index: 2;
 }
-.swiper-wrapper {
-    /*height: 667px !important;*/
+.imgWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.imgWrapper img{
+  width: 280px;
+  /*height: 280px;*/
+  transform: translate3d(-50%, -50%, 0);
 }
 </style>
