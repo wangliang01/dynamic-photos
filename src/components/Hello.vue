@@ -8,18 +8,18 @@
                 </div>
                 <div class="background"></div>
             </swiper-slide>
-            <audio src="./static/mp3/paomo.mp3" autoplay="true" class="audio">
+            <audio src="./static/mp3/paomo.mp3" autoplay="true" class="audio" loop="true">
               您的浏览器不支持 audio 标签。
             </audio>
             <swiper-slide class="page2 page">
                 <div class="imgWrapper">
-                    <img :src="require('../assets/imgs/photo2.jpg')" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+                    <img :src="require('../assets/imgs/photo2.jpg')" alt="" class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
                 </div>
                 <div class="background"></div>
             </swiper-slide>
             <swiper-slide class="page3 page">
                 <div class="imgWrapper">
-                    <img :src="require('../assets/imgs/photo3.jpg')" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+                    <img :src="require('../assets/imgs/photo3.jpg')" alt="" class="ani" swiper-animate-effect="flip" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
                 </div>
                 <div class="background"></div>
             </swiper-slide>
@@ -149,10 +149,11 @@ export default {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 80%;
+  transform: translate3d(-50%, -50%, 0);
 }
 .imgWrapper img{
-  width: 280px;
+  width: 100%;
   /*height: 280px;*/
-  transform: translate3d(-50%, -50%, 0);
 }
 </style>
